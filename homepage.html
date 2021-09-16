@@ -1,0 +1,83 @@
+<!doctype html>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+<html>
+    <head>
+        <title>Chris's Personal Webpage</title>
+    </head>
+
+    <body>
+        <main>
+
+            <div id = "top-container">
+                <a href = "homepage.html"> 
+                        <img src = "home-button.png"  id="home-button" 
+                        alt = "Home icon with link to home page">
+                    </a>   
+                        
+                <div id = "title-header"> 
+            
+                    <!--Need to figure out how to link to page (or do I need to hyperlink?)-->
+        
+                    <h1 id = "title">Welcome to my personal webpage!</h1>
+                    <h5>This page is under construction, thank you for your patience.</h5>
+              
+                </div>
+        
+            </div>
+
+            <div>
+                <img src="chris-lm2.png" id="chris-lm2"
+                    alt="Page builder standing in front of Apollo-era Lunar lander in Washington DC."/>
+            </div>
+
+            <div id="center">
+                <p>An internet joke says developers who can<br> center a div are automatically hire-able.</p>
+                <p><b>Well, here's my centered div. &#x1f44d;</b></p>
+            </div id = "silver-box">
+
+            <div id="projects-title">
+            <h3>Some of my personal projects.</h3>
+            </div>
+
+            <div id="projects-container">
+                <div id="morse">
+                    <p>Early in my experience learning Python I decided to create a <br>Morse Code Translator</a>. 
+                        You can use it below. <br>Here's the <a href = "https://github.com/RainyCityDiver/MorseTranslator">Github repository</a>.</p>
+                    </p>
+                    <form action = "get" target = "MorsetoEnglish.py"> 
+                        <p><input type = "text" placeholder = "English here." value = ""/>
+                        <input type = "submit" value = "Translate to Morse"/>
+                        <input type = "text" placeholder = "Morse code here." value = ""/>
+                        <input type = "submit" value = "Translate to English"/>
+                    </form>
+                </div>
+                <div id="avg-finder">
+                    <p>Want a handy way to get the average of a bunch of numbers <br>
+                    (and aren't afraid to manually input them)? Type them in below!</p>
+                    <p style="font-size: smaller;">If you mess up a number, enter it's negative/positive opposite to cancel it out!</p>
+                    <form action = "get" target = "simpleaveragefinder.py">
+                        <p><input type = "text" placeholder = "One number at a time please!"
+                        value = ""/>
+                        <input type="submit" value="Find Average"/>
+                    </form>
+                </div>
+            </div>
+            <!--Keeping this for reference:
+            <div id="colorchange">
+            -->
+            
+            </div>
+
+    
+
+        </main>
+    </body>
+
+
+
+
+
+
+
+</html>

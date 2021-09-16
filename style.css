@@ -1,0 +1,180 @@
+#top-container {
+    /* Wraps #header <div> and #home-button <div> 
+    to help put them side-by-side (see also 
+    .side-by-side). https://jsfiddle.net/CTsFF/ */
+    /* display: table;*/
+    width: 100% ;
+    height: 10%;
+    column-count: 2;
+    border-style: solid;
+    border-width: 2px;
+    border-color: red;
+}
+
+#home-button-wrapper {
+    /*Contains home-icon image to allow navigation 
+    back to home page. */
+    /*Will probably replace with modern top-ribbon 
+    and drop-down nav. Eventually. */
+    /*float: top;*/
+    /*Trying to get image scalable for HiDPI screens, 
+    and set to scale up/down with viewport (keeping 
+    10% width), but to a max height matching #header 
+    height. */
+    /* border-color: darkturquoise;
+    border-style: solid;
+    border-width: thin;
+    height: auto;
+    max-width: 15vw; 
+    padding: 10px;
+    float: left; */
+}
+
+#home-button {
+    /* Home Icon img */
+    max-height: 10%;
+    width: auto;
+    flex-shrink: auto;
+    flex: 1st-col;
+    border-color: darkturquoise;
+    border-style: solid;
+    border-width: thin;
+    height: auto;
+    max-width: 8vw; 
+    padding: 10px;
+    float: left;
+}
+
+#title-header {
+    /*Contains page title (& under-construction message). */
+    background: rgb(83, 83, 83);
+    border-color: darkorange;
+    border-width: thin;
+    border-style: groove;
+    /* float: top;
+    width: 90%; 
+    height: fit-content; */
+    color: whitesmoke;
+    margin: 3px;
+    float: right;
+    flex: 2nd-col;
+}
+    
+#title {
+    /* To set fancy text for page title. */
+    
+}
+
+.side-by-side {
+    /* Allows home image and #header <div> to sit 
+    next to each other (instead of stacking). */
+    /* display: inline; */
+    
+}
+
+body {
+    /* float: right; */
+    /* width: 90%; */
+    /* display = inline-block; */
+    /* Old code that allows nav and body to sit 
+    next to each other instead of on top/underneath. 
+    Keeping for reference for now. */ 
+    background-color: rgb(20, 32, 32);
+    color: whitesmoke;
+}
+
+#chris-lm2 {
+    /* Page-width scaling image of me. 
+    Want to eventually make <body> scroll up 
+    over it like a modern webpage. */
+    max-width: 100vw;
+    height:auto;
+}
+
+#center {
+    /* Center-a-div joke. 
+    Cross your fingers this gets me hired. */
+    border-color:darkorange;
+    border-width:medium;
+    border-style:solid;
+    height:fit-content;
+    width:max-content;
+    padding-left:2%;
+    padding-right:2%;
+    background: rgba(185, 185, 185, 0.3);
+    margin: auto; /*centered horizontally */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    line-height: 20px;
+    color: whitesmoke;
+    text-align: center;
+    }
+
+#projects-title {
+    /* Title div for personal projects space. */
+    border-color: red;
+    border-width: 2px;
+    border-style: solid;
+    margin: 3px;
+    text-align: center;
+}
+
+#projects-container {
+    /* Contains front-end of select personal projects. */
+    border-style: solid;
+    border-color: lime;
+    border-width: 2px;
+    padding: 4px;
+    margin: 3px;
+    column-count: 2;
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+#morse {
+    /* Contains text and inputs for English-Morse 
+    translator (Python). */
+    border-width: 2px;
+    border-color: red;
+    border-style: solid;
+    margin: 1vw;
+    padding: 1vw;
+    width: 40vw;
+    height: auto;
+    float: left;
+    text-align: center; 
+    flex: 1st-col;
+    flex: 1;
+}
+
+#avg-finder {
+    /* Contains text & input to use simpleaveragefinder.py. */
+    border-width: 2px;
+    border-color: lightskyblue;
+    border-style: solid;
+    margin: 1vw;
+    padding: 1vw;
+    width: 40vw;
+    height: auto;
+    float: right;
+    text-align: center; 
+    flex: 2nd-col;
+    flex: 1;
+}
+
+#colorchange{
+    /* Keeping this here for reference. */
+    height: 30px;
+    display: block;
+    animation-name: colorchange;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes colorchange {
+    /* Keeping this here for reference. */
+    0% {background-color: gold;}
+    100% {background-color: purple;}
+}
+
