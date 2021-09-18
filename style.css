@@ -1,14 +1,45 @@
+
+/* TO DO:
+1. set top-container to take up more vertical space if
+viewport is phone (to avoid it becomming too small to 
+read).
+2. Beautify 
+*/
+
+:root {
+    --text-color: black;
+    --bg-color:snow;
+}
+
+[data-theme="dark"] {
+    /* https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8 */
+    --text-color:whitesmoke;
+    --bg-color: rgb(20, 32, 32);
+}
+
+html, body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: var(--text-color);
+}
+
 #top-container {
     /* Wraps #header <div> and #home-button <div> 
     to help put them side-by-side (see also 
     .side-by-side). https://jsfiddle.net/CTsFF/ */
     /* display: table;*/
+    color: var(--text-color);
     width: 100% ;
-    height: 10%;
-    column-count: 2;
+    height: 8%;
+    column-count: 3;
     border-style: solid;
     border-width: 2px;
     border-color: red;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #home-button-wrapper {
@@ -32,32 +63,39 @@
 
 #home-button {
     /* Home Icon img */
-    max-height: 10%;
-    width: auto;
-    flex-shrink: auto;
-    flex: 1st-col;
+    /* width: auto; */
     border-color: darkturquoise;
-    border-style: solid;
-    border-width: thin;
     height: auto;
     max-width: 8vw; 
-    padding: 10px;
-    float: left;
+    margin: 1px;
+    flex: 1st-col;
+    flex-grow: 1;
 }
 
 #title-header {
     /*Contains page title (& under-construction message). */
-    background: rgb(83, 83, 83);
+    background: rgba(185, 185, 185, 0.3);
     border-color: darkorange;
-    border-width: thin;
-    border-style: groove;
-    /* float: top;
-    width: 90%; 
-    height: fit-content; */
-    color: whitesmoke;
-    margin: 3px;
-    float: right;
+    min-height: fit-content; 
+    margin: 1px;
     flex: 2nd-col;
+    flex-grow: 1;
+}
+
+#theme-toggle {
+    background-color: var(--bg-color);
+    border-color: violet;
+    display: flex;
+    flex: 3rd-col;
+    padding: 3px;
+    margin: 1px;
+    align-items: center;
+}
+
+.top-container {
+    /* shared style attrib. for top-container contents */
+    border-width: thin;
+    border-style: solid;
 }
     
 #title {
@@ -79,8 +117,8 @@ body {
     /* Old code that allows nav and body to sit 
     next to each other instead of on top/underneath. 
     Keeping for reference for now. */ 
-    background-color: rgb(20, 32, 32);
-    color: whitesmoke;
+    /* background-color: rgb(20, 32, 32); */
+    /* color: var(--text-color); */
 }
 
 #chris-lm2 {
@@ -106,7 +144,7 @@ body {
     margin-top: 1%;
     margin-bottom: 2%;
     line-height: 20px;
-    color: whitesmoke;
+    /* color: var(--text-color); */
     text-align: center;
     }
 
@@ -117,6 +155,7 @@ body {
     border-style: solid;
     margin: 3px;
     text-align: center;
+    /* color: var(--text-color); */
 }
 
 #projects-container {
@@ -129,38 +168,36 @@ body {
     column-count: 2;
     display: flex; 
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
 
 #morse {
     /* Contains text and inputs for English-Morse 
     translator (Python). */
-    border-width: 2px;
     border-color: red;
-    border-style: solid;
-    margin: 1vw;
-    padding: 1vw;
-    width: 40vw;
-    height: auto;
     float: left;
-    text-align: center; 
     flex: 1st-col;
     flex: 1;
 }
 
 #avg-finder {
     /* Contains text & input to use simpleaveragefinder.py. */
-    border-width: 2px;
     border-color: lightskyblue;
+    float: right;
+    flex: 2nd-col;
+    flex: 1;
+}
+
+.project-entries {
+    border-width: 2px;
     border-style: solid;
     margin: 1vw;
     padding: 1vw;
     width: 40vw;
     height: auto;
-    float: right;
     text-align: center; 
-    flex: 2nd-col;
-    flex: 1;
+    /* color: var(--text-color); */
+
 }
 
 #colorchange{

@@ -8,20 +8,26 @@
 
     <body>
         <main>
-
             <div id = "top-container">
                 <a href = "homepage.html"> 
-                        <img src = "home-button.png"  id="home-button" 
+                        <img src = "home-button.png"  id="home-button" class = "top-container"
                         alt = "Home icon with link to home page">
                     </a>   
                         
-                <div id = "title-header"> 
+                <div id = "title-header" class = "top-container"> 
             
                     <!--Need to figure out how to link to page (or do I need to hyperlink?)-->
         
                     <h1 id = "title">Welcome to my personal webpage!</h1>
                     <h5>This page is under construction, thank you for your patience.</h5>
               
+                </div>
+                <div class = "top-container" id = "theme-toggle">
+                    <label class = "theme-switch" for = "checkbox">
+                        <input type = "checkbox" id = "checkbox" />
+                        <div class = "slider round"></div>
+                    </label>
+                    <em>Dark <br>Mode</em>
                 </div>
         
             </div>
@@ -41,7 +47,7 @@
             </div>
 
             <div id="projects-container">
-                <div id="morse">
+                <div id="morse" class = "project-entries">
                     <p>Early in my experience learning Python I decided to create a <br>Morse Code Translator</a>. 
                         You can use it below. <br>Here's the <a href = "https://github.com/RainyCityDiver/MorseTranslator">Github repository</a>.</p>
                     </p>
@@ -52,12 +58,12 @@
                         <input type = "submit" value = "Translate to English"/>
                     </form>
                 </div>
-                <div id="avg-finder">
+                <div id="avg-finder" class = "project-entries">
                     <p>Want a handy way to get the average of a bunch of numbers <br>
                     (and aren't afraid to manually input them)? Type them in below!</p>
                     <p style="font-size: smaller;">If you mess up a number, enter it's negative/positive opposite to cancel it out!</p>
                     <form action = "get" target = "simpleaveragefinder.py">
-                        <p><input type = "text" placeholder = "One number at a time please!"
+                        <p><input type = "text" placeholder = "Seperate each # with a comma (,)!"
                         value = ""/>
                         <input type="submit" value="Find Average"/>
                     </form>
@@ -72,6 +78,8 @@
     
 
         </main>
+        <script src = "main.js"></script> 
+        <!-- https://www.youtube.com/watch?v=Gd0RBdFRvF0 -->
     </body>
 
 
